@@ -7,6 +7,9 @@
 
 namespace Pyz\Zed\Calculation;
 
+use Pyz\Zed\SigaPricing\Business\Calculator\CustomerVolumeDiscount;
+use Pyz\Zed\SigaPricing\Communication\Plugin\CustomerDiscountCalculatorPlugin;
+use Pyz\Zed\SigaPricing\Communication\Plugin\CustomerVolumeDiscountCalculatorPlugin;
 use Spryker\Zed\Calculation\CalculationDependencyProvider as SprykerCalculationDependencyProvider;
 use Spryker\Zed\Calculation\Communication\Plugin\Calculator\CanceledTotalCalculationPlugin;
 use Spryker\Zed\Calculation\Communication\Plugin\Calculator\DiscountAmountAggregatorForGenericAmountPlugin;
@@ -204,6 +207,11 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
             new InitialGrandTotalCalculatorPlugin(),
             new DiscountCalculatorPlugin(),
             new DiscountAmountAggregatorForGenericAmountPlugin(),
+
+            // added
+            new CustomerDiscountCalculatorPlugin(),
+            new CustomerVolumeDiscountCalculatorPlugin(),
+
             new ItemDiscountAmountFullAggregatorPlugin(),
 
             new TaxAmountCalculatorPlugin(),

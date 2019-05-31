@@ -37,6 +37,29 @@
                 <span class="float-right">{{ data.cart.totals.subtotal | money }}</span>
             </li>
 
+            {% if data.cart.totals.customerDiscountTotals.onlineDiscount is not empty %}
+                <li class="list__item {{ config.name }}__item">
+                    <span>{{ 'cart.customerdiscounts.onlinediscount' | trans({'%percents%': data.cart.totals.customerDiscountTotals.onlineDiscountPercents }) }}</span>
+                    <span class="float-right">{{ data.cart.totals.customerDiscountTotals.onlineDiscount | money }}</span>
+                </li>
+            {% endif %}
+
+            {% if data.cart.totals.customerDiscountTotals.customerVolumeDiscount is not empty %}
+                <li class="list__item {{ config.name }}__item">
+                    <span>{{ 'cart.customerdiscounts.volumediscount' | trans({'%percents%': data.cart.totals.customerDiscountTotals.customerVolumeDiscountPercents }) }}</span>
+                    <span class="float-right">{{ data.cart.totals.customerDiscountTotals.customerVolumeDiscount | money }}</span>
+                </li>
+            {% endif %}
+
+            {% if data.cart.totals.customerDiscountTotals.customerVolumeDiscountNextLevelPercents is not empty %}
+                <li class="list__item {{ config.name }}__item" style="padding: 4px 8px; margin-bottom: 8px; font-style: italic; background: white;">
+                    <span>{{ 'cart.customerdiscounts.volumediscount.nextLevel' | trans(
+                            {'%percents%': data.cart.totals.customerDiscountTotals.customerVolumeDiscountNextLevelPercents,
+                            '%amount%': data.cart.totals.customerDiscountTotals.customerVolumeDiscountNextLevelAmount | money}
+                        ) }}</span>
+                </li>
+            {% endif %}
+
             {% if data.cart.shipment is not empty and data.cart.shipment.method is not empty %}
                 <li class="list__item {{ config.name }}__item">
                     <span>{{ 'cart.shipping' | trans }} {{ data.cart.shipment.method.name }}</span>

@@ -8,7 +8,6 @@ use Spryker\Zed\Kernel\Business\AbstractBusinessFactory;
 
 /**
  * @method \Pyz\Zed\SigaPricing\SigaPricingConfig getConfig()
- * @method \Pyz\Zed\SigaPricing\Persistence\SigaPricingQueryContainer getQueryContainer()
  */
 class SigaPricingBusinessFactory extends AbstractBusinessFactory
 {

@@ -2671,3 +2671,9 @@ company_page.company_role_permission.permission_save_error,Permission configurat
 company_page.company_role_permission.permission_save_error,Berechtigungskonfiguration wurde nicht aktualisiert,de_DE
 company_page.company_role_permission.permission_save_success,Permission configuration has been updated,en_US
 company_page.company_role_permission.permission_save_success,Berechtigungskonfiguration wurde aktualisiert,de_DE
+cart.customerdiscounts.onlinediscount,Online Discount (%percents%%),en_US
+cart.customerdiscounts.onlinediscount,Online-Rabatt (%percents%%),de_DE
+cart.customerdiscounts.volumediscount,Customer Volume Discount (%percents%%),en_US
+cart.customerdiscounts.volumediscount,Lieferschwellenrabatt (%percents%%),de_DE
+cart.customerdiscounts.volumediscount.nextLevel,Add %amount% to your subtotal to get %percents%% discount!,en_US
+cart.customerdiscounts.volumediscount.nextLevel,Mit %amount% höherem Warenwert erhöht sich der Lieferschwellenrabatt auf %percents%%!,de_DE
